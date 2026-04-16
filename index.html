@@ -1,0 +1,833 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BIM WORKSHOP SUMMARY - Dashboard</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Space+Grotesk:wght@500;700&display=swap"
+        rel="stylesheet">
+</head>
+
+<body class="page-fade-in">
+    <!-- Header -->
+    <header class="header">
+        <div class="header-left">
+            <div class="hamburger-menu" id="hamburgerMenu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+            <div class="logo-circle"></div>
+            <h1 class="header-title">BIM WORKSHOP SUMMARY</h1>
+        </div>
+        <div class="header-right">
+            <a href="index.html" class="nav-link">Home</a>
+            <a href="#" class="nav-link">Topics</a>
+        </div>
+    </header>
+
+    <!-- Sidebar Navigation -->
+    <aside id="sidebar" class="sidebar">
+        <div class="sidebar-header">
+            <h2 class="sidebar-title">Topics</h2>
+            <button class="close-sidebar" id="closeSidebar">✕</button>
+        </div>
+        <nav class="sidebar-nav">
+            <a href="#" class="sidebar-link" data-target="summary-view">First Two Weeks Summary</a>
+            <a href="#" class="sidebar-link active" data-target="test-view">BIM WORKSHOP SUMMARY</a>
+        </nav>
+    </aside>
+
+    <!-- Overlay array -->
+    <div id="sidebarOverlay" class="sidebar-overlay"></div>
+
+    <!-- Cards Layout -->
+    <main class="cards-container view-section" id="summary-view" style="display: none;">
+
+        <!-- CARD 1 -->
+        <article class="card">
+            <div class="card-bg" style="background-image: url('assets/card_1_bg.png');"></div>
+            <div class="card-overlay"></div>
+
+            <div class="card-number">1</div>
+
+            <div class="collapsed-content">
+                <h2 class="title">ABOUT ALEC</h2>
+                <h3 class="subtitle">Company Overview</h3>
+                <p class="task-label">Eng.Ala'a Task..</p>
+            </div>
+
+            <div class="expanded-content">
+                <button class="close-btn">CLOSE ✕</button>
+                <div class="slider-wrapper">
+                    <div class="slide-track" id="card1-track">
+                        <!-- Page 1: Tendering Overview -->
+                        <div class="slide-page page-1">
+                            <div class="p1-content" style="display: flex; flex-direction: column; align-items: center; justify-content: center;">
+                                <h1 class="huge-title" style="text-decoration: line-through; text-decoration-thickness: 2px; text-decoration-color: var(--neon); font-size: clamp(2.5rem, 3.5vw, 4.5rem); opacity: 0.7; margin-bottom: 5px; transform: translateX(-40px); white-space: nowrap;">Construction Group</h1>
+                                <h2 class="medium-subtitle" style="font-size: clamp(1.8rem, 2.5vw, 3rem); color: var(--neon); margin-bottom: 50px; white-space: nowrap; transform: translateX(-40px);">Business Side Of Engineering</h2>
+                                
+                                <div class="tendering-container">
+                                    <div class="tend-center">Tendering</div>
+                                    <div class="tend-node tend-node-1">Estimation<br>Department</div>
+                                    <div class="tend-node tend-node-2">Planning<br>Department</div>
+                                    <div class="tend-node tend-node-3">Commercial<br>Department</div>
+                                    <div class="tend-node tend-node-4">Authorities<br>Department</div>
+                                    <div class="tend-node tend-node-5">Surveying<br>Department</div>
+                                    <div class="tend-node tend-node-6">Consultants</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Page 2: Tendering Question Split 1 -->
+                        <div class="slide-page page-new">
+                            <div class="p1-content" style="width: 100%; max-width: 900px; text-align: left;">
+                                <h2 class="medium-subtitle" style="color: var(--neon); text-transform: none; text-align: left; margin-bottom: 20px; white-space: nowrap; font-size: clamp(1.6rem, 2.5vw, 2.8rem);">Master Developer &rarr; Tendering &rarr; ALEC</h2>
+                                <h3 class="auth-subtitle" style="color: var(--white); text-align: left; margin-bottom: 30px; font-size: 1.5rem;">Why Early Tendering?</h3>
+                                <ul class="bullet-list" style="text-align: left;">
+                                    <li>ALEC is involved in Early Tendering of Mega Projects Designed by Master Developers.</li>
+                                    <li>Master Developers avoid developing Full IFC without knowing the COST.</li>
+                                    <li>Master Developers Hires ALEC to calculate the COST of project, to know how much it will cost before proceeding with developing full IFC.</li>
+                                    <li>Early Tendering is Fast Reality Check for Owner to know if he should proceed with Full IFC or Not.</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <!-- Page 3: Tendering Question Split 2 -->
+                        <div class="slide-page page-new-2">
+                            <div class="p1-content" style="width: 100%; max-width: 900px; text-align: left;">
+                                <h2 class="medium-subtitle" style="color: var(--neon); text-transform: none; text-align: left; margin-bottom: 20px; white-space: normal;">Why does ALEC need all these departments and Consultants for Tendering?</h2>
+                                <ul class="bullet-list" style="text-align: left;">
+                                    <li><span style="color: var(--neon); font-weight: 700; text-transform: uppercase;">Estimation Department</span> to calculate the COST.</li>
+                                    <li><span style="color: var(--neon); font-weight: 700; text-transform: uppercase;">Planning Department</span> for making the PRELIMINARY SCHEDULE.</li>
+                                    <li><span style="color: var(--neon); font-weight: 700; text-transform: uppercase;">Commercial Department</span> for allocating the RISK.</li>
+                                    <li><span style="color: var(--neon); font-weight: 700; text-transform: uppercase;">Consultants</span> for filling the gaps due to the INCOMPLETE DESIGN.</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <!-- Page 2: Ecosystem -->
+                        <div class="slide-page page-2">
+                            <div class="ecosystem-container">
+                                <div class="eco-center">ALEC<br>Holdings</div>
+                                <div class="eco-node node-1">ALEC<br>Fitout</div>
+                                <div class="eco-node node-2">Target</div>
+                                <div class="eco-node node-3">ALEC<br>Engineering</div>
+                                <div class="eco-node node-4">ALEC<br>Energy</div>
+                                <div class="eco-node node-5">ALEC<br>Facades</div>
+                                <div class="eco-node node-6">AJI<br>Rentals</div>
+                                <div class="eco-node node-7">ALEC<br>Data Centers</div>
+                            </div>
+                        </div>
+
+                        <!-- Page 3: Culture -->
+                        <div class="slide-page page-3">
+                            <div class="p3-content">
+                                <h2 class="culture-title">ALEC Culture</h2>
+                                <div class="culture-points">
+                                    <div class="c-point">
+                                        <h4>Leadership</h4>
+                                        <p>Strategy + Execution = Succession</p>
+                                    </div>
+                                    <div class="c-point">
+                                        <h4>ALEC Values</h4>
+                                        <p>Innovation, Alignment, Integrity</p>
+                                    </div>
+                                    <div class="c-point">
+                                        <h4>Ethics</h4>
+                                        <p>What’s right and what’s wrong</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="slider-dots" id="card1-dots">
+                        <div class="dot active" data-index="0"></div>
+                        <div class="dot" data-index="1"></div>
+                        <div class="dot" data-index="2"></div>
+                        <div class="dot" data-index="3"></div>
+                        <div class="dot" data-index="4"></div>
+                    </div>
+                </div>
+            </div>
+        </article>
+
+        <!-- CARD 2 -->
+        <article class="card auth-card">
+            <div class="card-bg logos-grid">
+                <div class="logo-item"
+                    style="background-image: url('assets/trakhees-dubai-logo-png_seeklogo-343939.png');"></div>
+                <div class="logo-item"
+                    style="background-image: url('assets/503592560_4005837089744932_693968294810295277_n.jpg');"></div>
+                <div class="logo-item"
+                    style="background-image: url('assets/Dubai-civil-defence-approved-contractor-.webp');"></div>
+                <div class="logo-item" style="background-image: url('assets/dubai-electricity-800.png');"></div>
+            </div>
+            <div class="card-overlay"></div>
+
+            <div class="card-number">2</div>
+
+            <div class="collapsed-content">
+                <h2 class="title">AUTHORITIES</h2>
+                <h3 class="subtitle">Regulations & Entities</h3>
+                <p class="task-label">Eng.Ala'a Task..</p>
+            </div>
+
+            <div class="expanded-content">
+                <button class="close-btn">CLOSE ✕</button>
+                <div class="slider-wrapper wrapper-auth">
+                    <div class="slide-track track-auth" id="card2-track">
+                        <!-- Page Intro -->
+                        <div class="slide-page page-auth">
+                            <div class="auth-spacer"></div>
+                            <div class="auth-content" style="align-items: flex-start;">
+                                <h2 class="auth-subtitle" style="text-align: left; margin-bottom: 10px; font-size: 2.5rem; text-transform: capitalize;">Authorities Ensure Compliance</h2>
+                                <h1 class="huge-title" style="text-align: left; margin-bottom: 0; font-size: clamp(3rem, 5vw, 6rem);">Codes Define<br><span style="color: var(--neon);">Rules</span></h1>
+                            </div>
+                        </div>
+                        <!-- Page 1 -->
+                        <div class="slide-page page-auth">
+                            <div class="auth-spacer"></div>
+                            <div class="auth-content">
+                                <div class="auth-title-container">
+                                    <div class="auth-logo dm-logo"></div>
+                                    <h2 class="auth-title glow-title">Dubai Municipality</h2>
+                                </div>
+                                <h3 class="auth-subtitle">City Manager for Dubai</h3>
+                                <ul class="auth-bullets">
+                                    <li>Issues construction permits</li>
+                                    <li>Preconstruction approvals</li>
+                                    <li>Site surveying (gate level, land demarcation)</li>
+                                    <li>Structural inspections</li>
+                                    <li>Building completion certificate</li>
+                                </ul>
+                                <div style="width: 100%; max-width: 700px; display: flex; justify-content: flex-start; margin-top: 40px;">
+                                    <p class="task-label" style="font-size: 1.05rem; padding: 10px 18px; margin-top: 0; background: rgba(204, 255, 0, 0.08);">→ Applies DBC + FLSC</p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Page 2 -->
+                        <div class="slide-page page-auth">
+                            <div class="auth-spacer"></div>
+                            <div class="auth-content">
+                                <div class="auth-title-container">
+                                    <div class="auth-logo dewa-logo"></div>
+                                    <h2 class="auth-title glow-title">DEWA</h2>
+                                </div>
+                                <h3 class="auth-subtitle">Authority for electricity and water</h3>
+                                <ul class="auth-bullets">
+                                    <li>Required before utility connection</li>
+                                    <li>Electricity NOC</li>
+                                    <li>Water NOC</li>
+                                    <li>Disconnection before demolition</li>
+                                    <li>New connections and modifications</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <!-- Page 3 -->
+                        <div class="slide-page page-auth">
+                            <div class="auth-spacer"></div>
+                            <div class="auth-content">
+                                <div class="auth-title-container">
+                                    <div class="auth-logo dm-logo"></div>
+                                    <h2 class="auth-title glow-title">DDA</h2>
+                                </div>
+                                <h3 class="auth-subtitle">City Manager for specific zones</h3>
+                                <ul class="auth-bullets">
+                                    <li>Some permits overlap with Dubai Municipality</li>
+                                    <li>Mobilization permits</li>
+                                    <li>Shoring permits</li>
+                                    <li>Demolition permits</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <!-- Page 4 -->
+                        <div class="slide-page page-auth">
+                            <div class="auth-spacer"></div>
+                            <div class="auth-content">
+                                <div class="auth-title-container">
+                                    <div class="auth-logo dcd-logo"></div>
+                                    <h2 class="auth-title glow-title">Dubai<br>Civil Defense</h2>
+                                </div>
+                                <h3 class="auth-subtitle">Fire and life safety authority</h3>
+                                <ul class="auth-bullets">
+                                    <li>Fire system approvals</li>
+                                    <li>Drawing review</li>
+                                    <li>Site inspections</li>
+                                    <li>Completion certification</li>
+                                </ul>
+                                <div style="width: 100%; max-width: 700px; display: flex; justify-content: flex-start; margin-top: 40px;">
+                                    <p class="task-label" style="font-size: 1.05rem; padding: 10px 18px; margin-top: 0; background: rgba(204, 255, 0, 0.08);">→ Focuses on FLSC enforcement</p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Page 5 -->
+                        <div class="slide-page page-auth">
+                            <div class="auth-spacer"></div>
+                            <div class="auth-content">
+                                <div class="auth-title-container">
+                                    <div class="auth-logo trakhees-logo"></div>
+                                    <h2 class="auth-title glow-title">Trakhees</h2>
+                                </div>
+                                <h3 class="auth-subtitle">Authority for PCFC</h3>
+                                <ul class="auth-bullets">
+                                    <li>Trakhees works as the regulatory arm for PCFC</li>
+                                    <li>Construction permit approvals</li>
+                                    <li>Design compliance</li>
+                                    <li>Safety regulation</li>
+                                    <li>Alternative authority to DM in certain areas</li>
+                                </ul>
+                                <div style="width: 100%; max-width: 700px; display: flex; justify-content: flex-start; margin-top: 40px;">
+                                    <p class="task-label" style="font-size: 1.05rem; padding: 10px 18px; margin-top: 0; background: rgba(204, 255, 0, 0.08);">→ Applies DBC + FLSC + internal regulations</p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Page 6: DEQ System -->
+                        <div class="slide-page page-auth">
+                            <div class="auth-spacer"></div>
+                            <div class="auth-content"
+                                style="flex: 1; display: flex; flex-direction: column; justify-content: center; align-items: flex-start; padding-right: 5%; height: 100%;">
+                                <div class="auth-title-container" style="margin-bottom: 10px;">
+                                    <h2 class="auth-title glow-title" style="font-size: clamp(2.5rem, 4vw, 4.5rem); line-height: 1;">DEQ SYSTEM</h2>
+                                </div>
+                                <h3 class="auth-subtitle" style="margin-bottom: 20px;">System Understanding</h3>
+                                <ul class="auth-bullets" style="max-width: 800px; gap: 10px;">
+                                    <li style="font-size: clamp(1rem, 1.8vw, 1.25rem); padding-left: 20px;"><span class="highlight" style="color: var(--neon); font-weight: 700;">Gives companies permits</span> – Lets firms do certain engineering activities legally in Dubai.</li>
+                                    <li style="font-size: clamp(1rem, 1.8vw, 1.25rem); padding-left: 20px;"><span class="highlight" style="color: var(--neon); font-weight: 700;">Checks engineers</span> – You need to pass engineering exams and prove experience/credentials to get approved.</li>
+                                    <li style="font-size: clamp(1rem, 1.8vw, 1.25rem); padding-left: 20px;"><span class="highlight" style="color: var(--neon); font-weight: 700;">Regulates projects</span> – Makes sure only qualified engineers and firms handle engineering work safely and professionally.</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="slider-dots" id="card2-dots">
+                        <div class="dot active" data-index="0"></div>
+                        <div class="dot" data-index="1"></div>
+                        <div class="dot" data-index="2"></div>
+                        <div class="dot" data-index="3"></div>
+                        <div class="dot" data-index="4"></div>
+                        <div class="dot" data-index="5"></div>
+                        <div class="dot" data-index="6"></div>
+                    </div>
+                </div>
+            </div>
+        </article>
+
+        <!-- CARD 3 -->
+        <article class="card">
+            <div class="card-bg stamp-grid">
+                <div class="css-stamp type-neon">
+                    <span class="stamp-text">FLSC</span>
+                </div>
+                <div class="css-stamp type-white">
+                    <span class="stamp-text">DBC</span>
+                </div>
+                <div class="css-stamp type-grey">
+                    <span class="stamp-text">GREEN CODE</span>
+                </div>
+            </div>
+            <div class="card-overlay"></div>
+
+            <div class="card-number">3</div>
+
+            <div class="collapsed-content">
+                <h2 class="title">UAE CODES</h2>
+                <h3 class="subtitle">Regulations & Guidelines</h3>
+                <p class="task-label">Eng.Ala'a Task..</p>
+            </div>
+
+            <div class="expanded-content">
+                <button class="close-btn">CLOSE ✕</button>
+                <div class="slider-wrapper wrapper-auth">
+                    <div class="slide-track track-auth" id="card3-track">
+                        <!-- Page 1: FLSC Overview -->
+                        <div class="slide-page page-auth">
+                            <div class="auth-content" style="flex: 1; display: flex; flex-direction: row; justify-content: center; align-items: center; padding: 0 4%; height: 100%; width: 100%;">
+                                
+                                <!-- Left Column: Text -->
+                                <div style="flex: 1; display: flex; flex-direction: column; justify-content: center; align-items: flex-start; max-width: 50%;">
+                                    <div class="auth-title-container" style="margin-bottom: 20px;">
+                                        <h2 class="auth-title glow-title" style="font-size: clamp(3rem, 5vw, 5rem); line-height: 1;">FLSC</h2>
+                                    </div>
+                                    
+                                    <ul style="list-style-type: disc; padding-left: 25px; margin: 0; color: #cccccc; display: flex; flex-direction: column; gap: 25px; max-width: 900px; text-align: left;">
+                                        <li style="font-size: clamp(1.2rem, 1.8vw, 1.5rem); line-height: 1.5;">It's a <strong style="color: var(--neon);">Prescriptive Code</strong>, it shows us what to do.</li>
+                                        <li style="font-size: clamp(1.2rem, 1.8vw, 1.5rem); line-height: 1.5;">It guidelines the minimum requirements for applying <strong style="color: var(--white);">Fire Safety</strong> and <strong style="color: var(--white);">Life Safety</strong>.</li>
+                                        <li style="font-size: clamp(1.2rem, 1.8vw, 1.5rem); line-height: 1.5; list-style: none; margin-left: -25px;">
+                                            <span style="display: inline-block; font-size: 0.9rem; color: var(--black); background: var(--neon); padding: 5px 12px; border-radius: 4px; text-transform: uppercase; font-weight: 800; margin-bottom: 10px;">References</span><br>
+                                            NFPA, Civil Defense Authority.
+                                        </li>
+                                    </ul>
+                                </div>
+
+                                <!-- Right Column: Orbital Diagram -->
+                                <div style="flex: 1; display: flex; justify-content: center; align-items: center; position: relative;">
+                                    <div class="ecosystem-container" style="width: 400px; height: 400px; position: relative;">
+                                        
+                                        <!-- Central Node -->
+                                        <div class="eco-center" style="width: 120px; height: 120px; font-size: 1.5rem;">FLSC</div>
+                                        
+                                        <!-- Orbital Nodes -->
+                                        <div class="eco-node" style="width: 110px; height: 110px; margin-top: -55px; margin-left: -55px; font-size: 0.8rem; transform: rotate(-90deg) translate(160px) rotate(90deg);">Fire Protection Systems</div>
+                                        <div class="eco-node" style="width: 110px; height: 110px; margin-top: -55px; margin-left: -55px; font-size: 0.8rem; transform: rotate(-18deg) translate(160px) rotate(18deg);">Means Of Egress</div>
+                                        <div class="eco-node" style="width: 110px; height: 110px; margin-top: -55px; margin-left: -55px; font-size: 0.8rem; transform: rotate(54deg) translate(160px) rotate(-54deg);">Fire Access For Civil Defense Boats</div>
+                                        <div class="eco-node" style="width: 110px; height: 110px; margin-top: -55px; margin-left: -55px; font-size: 0.75rem; transform: rotate(126deg) translate(160px) rotate(-126deg);">Fire Access For Vehicles And Firefighters</div>
+                                        <div class="eco-node" style="width: 110px; height: 110px; margin-top: -55px; margin-left: -55px; font-size: 0.75rem; transform: rotate(198deg) translate(160px) rotate(-198deg);">Fire Serviced Vehicle And PERSONNEL Accessibility</div>
+
+                                    </div>
+                                </div>
+                                
+                            </div>
+                        </div>
+                        
+                        <!-- Page 2: DBC Overview -->
+                        <div class="slide-page page-auth">
+                            <div class="auth-content" style="flex: 1; display: flex; flex-direction: row; justify-content: center; align-items: center; padding: 0 4%; height: 100%; width: 100%;">
+                                
+                                <!-- Left Column: Text -->
+                                <div style="flex: 1; display: flex; flex-direction: column; justify-content: center; align-items: flex-start; max-width: 50%;">
+                                    <div class="auth-title-container" style="margin-bottom: 20px;">
+                                        <h2 class="auth-title glow-title" style="font-size: clamp(3rem, 5vw, 5rem); line-height: 1;">DBC</h2>
+                                    </div>
+                                    
+                                    <ul style="list-style-type: disc; padding-left: 25px; margin: 0; color: #cccccc; display: flex; flex-direction: column; gap: 15px; max-width: 900px; text-align: left;">
+                                        <li style="font-size: clamp(1.1rem, 1.6vw, 1.35rem); line-height: 1.5;">It's a <strong style="color: var(--neon);">Prescriptive Code</strong>, it shows us what to do.</li>
+                                        <li style="font-size: clamp(1.1rem, 1.6vw, 1.35rem); line-height: 1.5;">The main objective of DBC is to ensure every development constructed in Dubai meets the requirements of:
+                                            <ul style="list-style-type: circle; padding-left: 20px; margin-top: 8px; display: flex; flex-direction: column; gap: 6px; color: #a3a3a3;">
+                                                <li style="font-size: clamp(1rem, 1.4vw, 1.2rem); line-height: 1.4;">Health, safety, and welfare for people inside and outside developments.</li>
+                                                <li style="font-size: clamp(1rem, 1.4vw, 1.2rem); line-height: 1.4;"><strong style="color: var(--neon);">Sustainable design</strong> of developments.</li>
+                                            </ul>
+                                        </li>
+                                        <li style="font-size: clamp(1.1rem, 1.6vw, 1.35rem); line-height: 1.5; margin-top: 15px; list-style: none; margin-left: -25px;">
+                                            <span style="display: inline-block; font-size: 0.9rem; color: var(--black); background: var(--neon); padding: 5px 12px; border-radius: 4px; text-transform: uppercase; font-weight: 800; margin-bottom: 10px;">References</span><br>
+                                            International Codes, Government Authorities, and Service Providers.
+                                        </li>
+                                    </ul>
+                                </div>
+
+                                <!-- Right Column: Orbital Diagram -->
+                                <div style="flex: 1; display: flex; justify-content: center; align-items: center; position: relative;">
+                                    <div class="ecosystem-container" style="width: 400px; height: 400px; position: relative;">
+                                        
+                                        <!-- Central Node -->
+                                        <div class="eco-center" style="width: 120px; height: 120px; font-size: 1.5rem;">DBC</div>
+                                        
+                                        <!-- Orbital Nodes (4 Axis logic) -->
+                                        <div class="eco-node" style="width: 110px; height: 110px; margin-top: -55px; margin-left: -55px; font-size: 0.9rem; transform: rotate(-90deg) translate(160px) rotate(90deg);">Architecture</div>
+                                        <div class="eco-node" style="width: 110px; height: 110px; margin-top: -55px; margin-left: -55px; font-size: 0.9rem; transform: rotate(0deg) translate(160px) rotate(0deg);">Accessibility</div>
+                                        <div class="eco-node" style="width: 110px; height: 110px; margin-top: -55px; margin-left: -55px; font-size: 0.9rem; transform: rotate(90deg) translate(160px) rotate(-90deg);">Vertical<br>Transportation</div>
+                                        <div class="eco-node" style="width: 110px; height: 110px; margin-top: -55px; margin-left: -55px; font-size: 0.9rem; transform: rotate(180deg) translate(160px) rotate(-180deg);">Structure</div>
+
+                                    </div>
+                                </div>
+                                
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="slider-dots" id="card3-dots">
+                        <div class="dot active" data-index="0"></div>
+                        <div class="dot" data-index="1"></div>
+                    </div>
+                </div>
+            </div>
+        </article>
+
+        <!-- CARD 4 -->
+        <article class="card">
+            <div class="card-bg" style="background-color: #0c0c0c; display: flex; flex-direction: column; justify-content: center; align-items: flex-start; padding-left: 2vw; overflow: hidden;">
+                <h2 style="font-size: 4vw; color: rgba(255,255,255,0.25); margin-bottom: 15px; text-transform: uppercase; font-family: var(--font-heading); white-space: nowrap;">Design Flow</h2>
+                <h2 style="font-size: 4vw; color: rgba(204, 255, 0, 0.25); margin-bottom: 15px; text-transform: uppercase; font-family: var(--font-heading); white-space: nowrap;">Boreholes Circulation</h2>
+                <h2 style="font-size: 4vw; color: rgba(255,255,255,0.25); margin-bottom: 15px; text-transform: uppercase; font-family: var(--font-heading); white-space: nowrap;">Geotechnical Works</h2>
+            </div>
+            <div class="card-overlay"></div>
+
+            <div class="card-number">4</div>
+
+            <div class="collapsed-content">
+                <h2 class="title" style="font-size: 2rem;">Questions<br>&amp; Answers</h2>
+                <h3 class="subtitle">Action Items</h3>
+                <p class="task-label" style="color: #ff3333; border-color: rgba(255, 51, 51, 0.4); background: rgba(255, 51, 51, 0.15);">ENG.ALI Task</p>
+            </div>
+
+            <div class="expanded-content">
+                <button class="close-btn">CLOSE ✕</button>
+                <div class="slider-wrapper wrapper-auth">
+                    <div class="slide-track track-auth" id="card4-track">
+                        <!-- Page 1: Empty -->
+                        <div class="slide-page page-auth">
+                            <div class="auth-spacer"></div>
+                            <div class="auth-content" style="flex: 1; display: flex; flex-direction: column; justify-content: flex-start; align-items: flex-start; padding-top: 13%; padding-right: 5%; height: 100%;">
+                                <div class="auth-title-container" style="margin-bottom: 12px;">
+                                    <h2 class="medium-subtitle" style="font-size: clamp(1.6rem, 3vw, 2.4rem); color: var(--white); text-transform: none; text-align: left; white-space: normal; line-height: 1.2;">What defines Boreholes Number, Location & Depth?</h2>
+                                </div>
+
+                                <div style="width: 100%; max-width: 900px; display: flex; align-items: center; gap: 10px; margin-bottom: 22px;">
+                                    <p class="task-label" style="font-size: 0.9rem; padding: 5px 12px; margin: 0; background: rgba(204, 255, 0, 0.1); border-color: rgba(204, 255, 0, 0.3);">Eurocode 7 &mdash; EN 1997 1 & 2</p>
+                                    <p class="task-label" style="font-size: 0.9rem; padding: 5px 12px; margin: 0; background: rgba(204, 255, 0, 0.1); border-color: rgba(204, 255, 0, 0.3);">Circular 350</p>
+                                </div>
+
+                                <ul style="list-style-type: disc; padding-left: 25px; margin: 0; color: #cccccc; display: flex; flex-direction: column; gap: 10px;">
+                                    <li style="font-size: clamp(1.05rem, 1.8vw, 1.3rem); margin: 0;"><strong style="color: var(--neon); text-transform: uppercase;">G+12:</strong> 1 borehole per 750m², minimum 5 boreholes.</li>
+                                    <li style="font-size: clamp(1.05rem, 1.8vw, 1.3rem); margin: 0;"><strong style="color: var(--neon); text-transform: uppercase;">Less than G+12:</strong> 1 borehole per 750m², minimum 3 boreholes.</li>
+                                    <li style="font-size: clamp(1.05rem, 1.8vw, 1.3rem); margin: 0;"><strong style="color: var(--neon); text-transform: uppercase;">Large Structures:</strong> Grid of 60 meters between boreholes.</li>
+                                    <li style="font-size: clamp(1.05rem, 1.8vw, 1.3rem); margin: 0;"><strong style="color: var(--neon); text-transform: uppercase;">Single Villa:</strong> Minimum 2 boreholes per villa.</li>
+                                    <li style="font-size: clamp(1.05rem, 1.8vw, 1.3rem); margin: 0;"><strong style="color: var(--neon); text-transform: uppercase;">Compound Villa:</strong> 1 borehole per plot.</li>
+                                    <li style="font-size: clamp(1.05rem, 1.8vw, 1.3rem); margin: 0;"><strong style="color: var(--neon); text-transform: uppercase;">Depth:</strong> To be calculated utilizing Eurocode geotechnical design.</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <!-- Page 2: Design Flow -->
+                        <div class="slide-page page-auth">
+                            <div class="auth-spacer"></div>
+                            <div class="auth-content" style="flex: 1; display: flex; flex-direction: column; justify-content: flex-start; align-items: flex-start; padding-top: 13%; padding-right: 5%; height: 100%;">
+                                <div class="auth-title-container" style="margin-bottom: 25px;">
+                                    <h2 class="medium-subtitle" style="font-size: clamp(2rem, 4vw, 3.5rem); color: var(--white); text-transform: none; text-align: left; white-space: normal; line-height: 1.2;">Design Flow</h2>
+                                </div>
+                                
+                                <ul style="list-style-type: disc; padding-left: 25px; margin: 0; display: flex; flex-direction: column; gap: 20px; max-width: 900px; text-align: left;">
+                                    <li style="font-size: clamp(1.1rem, 1.8vw, 1.35rem); line-height: 1.5;"><strong style="color: var(--neon); text-transform: uppercase;">Concept</strong><br><span style="color: #cccccc; font-weight: 300;">What are we trying to build? It shows what the building is, massing, height, how big it is, and how it sits in a plot.</span></li>
+                                    <li style="font-size: clamp(1.1rem, 1.8vw, 1.35rem); line-height: 1.5;"><strong style="color: var(--neon); text-transform: uppercase;">Schematic</strong><br><span style="color: #cccccc; font-weight: 300;">Translates concept into testable system. Structural grids, columns layout, dimension plans... Soil report is active now, fire strategy.</span></li>
+                                    <li style="font-size: clamp(1.1rem, 1.8vw, 1.35rem); line-height: 1.5;"><strong style="color: var(--neon); text-transform: uppercase;">Detailed design "IFC"</strong><br><span style="color: #cccccc; font-weight: 300;">Fully engineered build. At this stage we have full structural calculations, load combinations, sections, and approved drawings.</span></li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <!-- Page 3: Sequence Of Foundation Works -->
+                        <div class="slide-page page-auth">
+                            <div class="auth-spacer" style="flex: 0 0 10%;"></div>
+                            <div class="auth-content" style="flex: 1; display: flex; flex-direction: column; justify-content: flex-start; align-items: flex-start; padding-top: 10%; padding-right: 5%; height: 100%;">
+                                <div class="auth-title-container" style="margin-bottom: 20px;">
+                                    <h2 class="medium-subtitle" style="font-size: clamp(1.6rem, 3.5vw, 2.8rem); color: var(--white); text-transform: none; text-align: left; white-space: nowrap; line-height: 1.2;">Sequence Of Foundation Works</h2>
+                                </div>
+                                
+                                <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 20px; flex-wrap: nowrap;">
+                                    <p class="task-label" style="margin: 0; font-size: clamp(0.9rem, 1.5vw, 1.15rem); padding: 5px 12px; color: #ff3333; border-color: rgba(255, 51, 51, 0.4); background: rgba(255, 51, 51, 0.15); text-transform: uppercase;">Shoring</p>
+                                    <p class="task-label" style="margin: 0; font-size: clamp(0.9rem, 1.5vw, 1.15rem); padding: 5px 12px; color: #ff3333; border-color: rgba(255, 51, 51, 0.4); background: rgba(255, 51, 51, 0.15); text-transform: uppercase;">Piling</p>
+                                    <p class="task-label" style="margin: 0; font-size: clamp(0.9rem, 1.5vw, 1.15rem); padding: 5px 12px; color: #ff3333; border-color: rgba(255, 51, 51, 0.4); background: rgba(255, 51, 51, 0.15); text-transform: uppercase;">Dewatering</p>
+                                    <p class="task-label" style="margin: 0; font-size: clamp(0.9rem, 1.5vw, 1.15rem); padding: 5px 12px; color: #ff3333; border-color: rgba(255, 51, 51, 0.4); background: rgba(255, 51, 51, 0.15); text-transform: uppercase;">Excavation</p>
+                                </div>
+                                
+                                <ul style="list-style-type: disc; padding-left: 20px; margin: 0; color: #cccccc; display: flex; flex-direction: column; gap: 10px; max-width: 900px; text-align: left;">
+                                    <li style="font-size: clamp(1.2rem, 2vw, 1.45rem); line-height: 1.4;">There is <strong style="color: var(--white);">no specific order</strong> for foundation in any code in the world.</li>
+                                    <li style="font-size: clamp(1.2rem, 2vw, 1.45rem); line-height: 1.4;"><strong style="color: var(--neon); letter-spacing: 1px;">GIFR &amp; GIR</strong></li>
+                                    <li style="font-size: clamp(1.2rem, 2vw, 1.45rem); line-height: 1.4;">The correct sequence of foundation works is chosen based on results from <strong style="color: var(--neon);">GIR</strong>.</li>
+                                    <li style="font-size: clamp(1.2rem, 2vw, 1.45rem); line-height: 1.4;">The sequence of foundation works may vary depending on the structure, and its location:
+                                        <ul style="list-style-type: circle; padding-left: 20px; margin-top: 8px; display: flex; flex-direction: column; gap: 8px; color: #a3a3a3;">
+                                            <li style="font-size: clamp(1rem, 1.6vw, 1.25rem); line-height: 1.3;"><strong style="color: var(--neon);">Coastal Areas:</strong> First dewatering, shoring, then excavation, and finally piling.</li>
+                                            <li style="font-size: clamp(1rem, 1.6vw, 1.25rem); line-height: 1.3;"><strong style="color: var(--neon);">Deep Basement:</strong> Shoring first, dewatering, excavation, and finally piling.</li>
+                                            <li style="font-size: clamp(1rem, 1.6vw, 1.25rem); line-height: 1.3;"><strong style="color: var(--neon);">Very Deep Basement (Tight Site):</strong> Piles first, shoring, dewatering, and excavation.</li>
+                                            <li style="font-size: clamp(1rem, 1.6vw, 1.25rem); line-height: 1.3;"><strong style="color: var(--neon);">No Basement (Shallow):</strong> Piling, excavation and dewatering, and shoring if required.</li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="slider-dots" id="card4-dots" style="bottom: 15px;">
+                        <div class="dot active" data-index="0"></div>
+                        <div class="dot" data-index="1"></div>
+                        <div class="dot" data-index="2"></div>
+                    </div>
+                </div>
+            </div>
+        </article>
+
+    </main>
+
+    <!-- Test View Layout -->
+    <main class="test-container view-section active-view" id="test-view" style="display: flex; position: relative; top: var(--header-h); width: 100vw; height: calc(100vh - var(--header-h)); background: var(--black); overflow: hidden;">
+        
+        <!-- Subtle architectural grid background -->
+        <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-image: linear-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px), linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px); background-size: 50px 50px; pointer-events: none; z-index: 0; opacity: 0.6;"></div>
+
+        <div class="slider-wrapper wrapper-auth" style="z-index: 10; width: 100%; height: 100%; position: absolute; top: 0; left: 0;">
+            <div class="slide-track track-auth" id="test-track">
+                
+                <!-- Page 1 (Main Content) -->
+                <div class="slide-page page-auth" style="flex-direction: column; align-items: center; justify-content: flex-start; padding: 40px; box-sizing: border-box;">
+                    <div style="display: flex; flex-direction: column; width: 100%; max-width: 1500px; height: 100%;">
+                        
+                        <!-- Sleek Header -->
+                        <div style="text-align: center; margin-bottom: 2rem; padding-top: 2vh;">
+                            <h1 style="color: var(--white); font-size: clamp(2.5rem, 4.5vw, 5.5rem); font-weight: 800; font-family: var(--font-heading); text-transform: uppercase; line-height: 1.1; margin-bottom: 0;">
+                                WHY ALEC <span style="color: var(--neon); text-shadow: 0 0 30px rgba(204, 255, 0, 0.2);">Authorities</span> Watch?<br>
+                                <span style="font-size: 0.55em; color: #a3a3a3; font-weight: 500;">
+                                    It is the <span style="color: var(--white); font-weight: 800; border-bottom: 3px solid var(--neon);">Consultant's</span> Job!
+                                    <span style="font-size: 0.65em; color: var(--neon); font-weight: 600; text-transform: none; letter-spacing: 1px; margin-left: 10px; font-family: var(--font-body); opacity: 0.9;">
+                                        — But a good gesture from Eng. Alaa for our future opportunities
+                                    </span>
+                                </span>
+                            </h1>
+                        </div>
+                        
+                        <!-- Comparison Grid -->
+                        <div style="display: flex; gap: 50px; width: 100%; flex: 1; min-height: 0; position: relative; margin-top: 20px;">
+                            
+                            <!-- Center VS Divider -->
+                            <div style="position: absolute; left: 50%; top: 40%; transform: translate(-50%, -50%); z-index: 20; background: var(--black); border: 2px solid rgba(255,255,255,0.05); border-radius: 50%; width: 70px; height: 70px; display: flex; align-items: center; justify-content: center; font-family: var(--font-heading); font-weight: 800; color: #555; font-size: 1.2rem; box-shadow: 0 0 30px rgba(0,0,0,0.8); backdrop-filter: blur(10px);">VS</div>
+
+                            <!-- Box 1: Consultant -->
+                            <div style="flex: 1; background: linear-gradient(145deg, rgba(30, 30, 30, 0.8) 0%, rgba(10, 10, 10, 0.95) 100%); border: 1px solid rgba(255, 255, 255, 0.08); border-top: 6px solid var(--neon); border-radius: 16px; padding: 50px; position: relative; display: flex; flex-direction: column; overflow: hidden; box-shadow: 0 20px 50px rgba(0,0,0,0.5); backdrop-filter: blur(10px);">
+                                
+                                <!-- Decorative Element -->
+                                <div style="position: absolute; top: 0; right: 0; width: 250px; height: 250px; background: radial-gradient(circle at top right, rgba(204, 255, 0, 0.08), transparent 70%); pointer-events: none;"></div>
+                                <div style="position: absolute; top: 40px; right: 40px; display: flex; gap: 6px;">
+                                    <div style="width: 8px; height: 8px; background: var(--neon); border-radius: 50%; box-shadow: 0 0 10px rgba(204, 255, 0, 0.5);"></div>
+                                    <div style="width: 8px; height: 8px; background: rgba(255,255,255,0.1); border-radius: 50%;"></div>
+                                    <div style="width: 8px; height: 8px; background: rgba(255,255,255,0.1); border-radius: 50%;"></div>
+                                </div>
+
+                                <h2 style="color: var(--white); font-size: clamp(2.5rem, 3.5vw, 4rem); font-weight: 800; font-family: var(--font-heading); text-transform: uppercase; margin-bottom: 8px; letter-spacing: 2px;">CONSULTANTS</h2>
+                                <p style="color: var(--neon); font-size: 1.3rem; text-transform: uppercase; letter-spacing: 3px; font-weight: 600; margin-bottom: 25px; padding-bottom: 25px; border-bottom: 1px dashed rgba(255,255,255,0.15); display: flex; align-items: center; gap: 10px;">Authorities Involvement <span style="font-size: 1.8rem; transform: translateY(-2px);">✅</span></p>
+                                
+                                <div style="flex: 1; padding-top: 10px;">
+                                    <ul style="list-style-type: disc; padding-left: 25px; margin: 0; color: var(--neon); display: flex; flex-direction: column; gap: 20px; text-align: left;">
+                                        <li style="font-size: 1.4rem; margin: 0;"><strong style="color: var(--white); text-transform: uppercase; letter-spacing: 1px;">LOD 100</strong></li>
+                                        <li style="font-size: 1.4rem; margin: 0;"><strong style="color: var(--white); text-transform: uppercase; letter-spacing: 1px;">LOD 200</strong></li>
+                                        <li style="font-size: 1.4rem; margin: 0;"><strong style="color: var(--white); text-transform: uppercase; letter-spacing: 1px;">LOD 300</strong></li>
+                                    </ul>
+                                </div>
+                                <div style="margin-top: auto; padding-top: 30px;">
+                                    <span style="font-style: italic; font-size: 0.85rem; color: rgba(204, 255, 0, 0.5); letter-spacing: 1px;">*Reference: DubaiBuildingPermitBIMStandards</span>
+                                </div>
+                            </div>
+
+                            <!-- Box 2: Contractor -->
+                            <div style="flex: 1; background: linear-gradient(145deg, rgba(30, 30, 30, 0.4) 0%, rgba(10, 10, 10, 0.8) 100%); border: 1px solid rgba(255, 255, 255, 0.04); border-top: 6px solid #444; border-radius: 16px; padding: 50px; position: relative; display: flex; flex-direction: column; overflow: hidden; box-shadow: 0 20px 50px rgba(0,0,0,0.3); backdrop-filter: blur(10px);">
+                                
+                                <!-- Decorative Element -->
+                                <div style="position: absolute; top: 0; right: 0; width: 250px; height: 250px; background: radial-gradient(circle at top right, rgba(255, 255, 255, 0.03), transparent 70%); pointer-events: none;"></div>
+                                <div style="position: absolute; top: 40px; right: 40px; display: flex; gap: 6px;">
+                                    <div style="width: 8px; height: 8px; background: #555; border-radius: 50%;"></div>
+                                    <div style="width: 8px; height: 8px; background: rgba(255,255,255,0.1); border-radius: 50%;"></div>
+                                    <div style="width: 8px; height: 8px; background: rgba(255,255,255,0.1); border-radius: 50%;"></div>
+                                </div>
+
+                                <h2 style="color: var(--white); font-size: clamp(2.5rem, 3.5vw, 4rem); font-weight: 800; font-family: var(--font-heading); text-transform: uppercase; margin-bottom: 8px; letter-spacing: 2px;">CONTRACTORS</h2>
+                                <p style="color: #999; font-size: 1.3rem; text-transform: uppercase; letter-spacing: 3px; font-weight: 600; margin-bottom: 25px; padding-bottom: 25px; border-bottom: 1px dashed rgba(255,255,255,0.15); display: flex; align-items: center; gap: 10px;">Authorities Involvement <span style="font-size: 1.8rem; transform: translateY(-2px);">❌</span></p>
+                                
+                                <div style="flex: 1; padding-top: 10px;">
+                                    <ul style="list-style-type: disc; padding-left: 25px; margin: 0; color: #999; display: flex; flex-direction: column; gap: 25px; text-align: left;">
+                                        <li style="font-size: 1.4rem; margin: 0;"><strong style="color: var(--white); text-transform: uppercase; letter-spacing: 1px;">LOD 400</strong><br><span style="color: #cccccc; font-weight: 300; font-size: 0.9em; display: inline-block; margin-top: 5px;">Fabrication, Shopdrawings, Installments</span></li>
+                                        <li style="font-size: 1.4rem; margin: 0;"><strong style="color: var(--white); text-transform: uppercase; letter-spacing: 1px;">LOD 500</strong><br><span style="color: #cccccc; font-weight: 300; font-size: 0.9em; display: inline-block; margin-top: 5px;">As Built Drawings</span></li>
+                                    </ul>
+                                </div>
+                                <div style="margin-top: auto; padding-top: 30px;">
+                                    <span style="font-style: italic; font-size: 0.85rem; color: rgba(255, 255, 255, 0.3); letter-spacing: 1px;">*Reference: DubaiBuildingPermitBIMStandards</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Page 2 (Context & History) -->
+                <div class="slide-page page-auth" style="flex-direction: column; align-items: flex-start; justify-content: flex-start; padding: 50px 60px; box-sizing: border-box;">
+                    
+                    <!-- Intro Text -->
+                    <div style="max-width: 1400px; width: 100%; margin-bottom: 25px;">
+                        <p style="color: var(--white); font-size: clamp(1.1rem, 1.5vw, 1.4rem); font-family: var(--font-body); line-height: 1.6; font-weight: 300; padding-left: 20px; border-left: 3px solid var(--neon); margin: 0;">
+                            Early days we used to convert the cad files into pdf and submit them to Authority! Nowadays it’s different, they are taking models, and to review these models they need to declare standards of MODELING, therefore they came up with the <strong style="color: var(--neon); font-weight: 700;">BIM Standards</strong>.
+                        </p>
+                    </div>
+
+                    <!-- Point 2: Old Days -->
+                    <div style="max-width: 1400px; width: 100%; margin-bottom: 25px;">
+                        <p style="color: var(--white); font-size: clamp(1.1rem, 1.5vw, 1.4rem); font-family: var(--font-body); line-height: 1.6; font-weight: 300; padding-left: 20px; border-left: 3px solid var(--neon); margin: 0;">
+                            <strong style="color: var(--neon); font-weight: 700; text-transform: uppercase;">OLD Days:</strong> 
+                            CAD <span style="color: var(--neon); margin: 0 10px; font-weight: bold;">→</span> PDF <span style="color: var(--neon); margin: 0 10px; font-weight: bold;">→</span> Authorities
+                        </p>
+                    </div>
+
+                    <!-- Point 3: Nowadays -->
+                    <div style="max-width: 1400px; width: 100%; margin-bottom: 25px;">
+                        <p style="color: var(--white); font-size: clamp(1.1rem, 1.5vw, 1.4rem); font-family: var(--font-body); line-height: 1.6; font-weight: 300; padding-left: 20px; border-left: 3px solid var(--neon); margin: 0;">
+                            <strong style="color: var(--neon); font-weight: 700; text-transform: uppercase;">Nowadays:</strong> 
+                            Information Models <span style="color: var(--neon); margin: 0 10px; font-weight: bold;">→</span> IFC <span style="color: var(--neon); margin: 0 10px; font-weight: bold;">→</span> Authorities
+                        </p>
+                    </div>
+
+                    <!-- Layout row for Definitions and Equation -->
+                    <div style="display: flex; width: 100%; max-width: 1400px; gap: 50px; margin-bottom: 30px; align-items: stretch;">
+                        
+                        <!-- Left Column: Definitions -->
+                        <div style="flex: 1.2; display: flex; flex-direction: column; justify-content: center; gap: 20px;">
+                            <!-- Revised Point 4: IFC -->
+                            <p style="color: var(--white); font-size: clamp(1.1rem, 1.4vw, 1.3rem); font-family: var(--font-body); line-height: 1.6; font-weight: 300; padding-left: 20px; border-left: 3px solid var(--neon); margin: 0;">
+                                <strong style="color: var(--neon); font-weight: 700;">IFC</strong> is more like a PDF viewer for review, not editing.<br>
+                                <span style="font-size: 0.9em; opacity: 0.7; font-style: italic;">("Information Container")</span>
+                            </p>
+                            
+                            <!-- Point 5: Geometrical info -->
+                            <p style="color: var(--white); font-size: clamp(1.1rem, 1.4vw, 1.3rem); font-family: var(--font-body); line-height: 1.6; font-weight: 300; padding-left: 20px; border-left: 3px solid var(--neon); margin: 0;">
+                                <strong style="color: var(--neon); font-weight: 700;">Geometrical information</strong> represents Location, Visual appearance, and Coordinates.
+                            </p>
+
+                            <!-- Point 6: Alphanumerical info -->
+                            <p style="color: var(--white); font-size: clamp(1.1rem, 1.4vw, 1.3rem); font-family: var(--font-body); line-height: 1.6; font-weight: 300; padding-left: 20px; border-left: 3px solid var(--neon); margin: 0;">
+                                <strong style="color: var(--neon); font-weight: 700;">Alphanumerical information</strong> are parameters, properties, and attributes to be filled inside the MODEL.
+                            </p>
+                        </div>
+
+                        <!-- Right Column: Visual Equation Diagram -->
+                        <div style="flex: 1; padding: 30px; background: rgba(255,255,255,0.02); border: 1px dashed rgba(255,255,255,0.1); border-radius: 16px; display: flex; align-items: center; justify-content: center;">
+                            <div style="display: flex; flex-direction: column; align-items: center; width: 100%; max-width: 450px;">
+                                
+                                <div style="display: flex; width: 100%; justify-content: space-between; align-items: center; gap: 15px;">
+                                    <div style="flex: 1; text-align: center; padding: 15px; background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); border-radius: 8px;">
+                                        <h4 style="color: var(--white); font-weight: 500; letter-spacing: 1px; margin: 0; font-size: 1.1rem;">Geometrical</h4>
+                                    </div>
+                                    <span style="color: var(--neon); font-size: 2rem; font-weight: bold; opacity: 0.5;">+</span>
+                                    <div style="flex: 1; text-align: center; padding: 15px; background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); border-radius: 8px;">
+                                        <h4 style="color: var(--white); font-weight: 500; letter-spacing: 1px; margin: 0; font-size: 1.1rem;">Alphanumerical</h4>
+                                    </div>
+                                </div>
+
+                                <!-- Arrow Down -->
+                                <div style="color: var(--neon); font-size: 2.5rem; line-height: 1; font-weight: bold; margin: 15px 0;">↓</div>
+                                
+                                <!-- Result -->
+                                <div style="width: 100%; text-align: center; padding: 20px; background: rgba(204,255,0,0.1); border: 2px solid var(--neon); border-radius: 12px; box-shadow: 0 0 30px rgba(204,255,0,0.1);">
+                                    <h3 style="color: var(--neon); font-size: 1.4rem; margin: 0; font-family: var(--font-heading); text-transform: uppercase;">Information Model</h3>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <!-- Point 6: Appendix B&C -->
+                    <div style="max-width: 1400px; width: 100%; margin-bottom: 25px;">
+                        <p style="color: var(--white); font-size: clamp(1.1rem, 1.5vw, 1.4rem); font-family: var(--font-body); line-height: 1.6; font-weight: 300; padding-left: 20px; border-left: 3px solid var(--neon); margin: 0;">
+                            <strong style="color: var(--neon); font-weight: 700;">Appendix B&amp;C</strong> shows the required alphanumerical information to be filled in the model for submission criteria and also to achieve the intention of BIM which is <span style="color: var(--neon); font-weight: 600;">"Automation"</span> &amp; <span style="color: var(--neon); font-weight: 600;">"Information for other Aspects of cities"</span>.
+                        </p>
+                    </div>
+
+                </div>
+
+                <!-- Page 3 (Workflow Diagram) -->
+                <div class="slide-page page-auth" style="flex-direction: column; align-items: flex-start; justify-content: flex-start; padding: 50px 60px; box-sizing: border-box;">
+                    
+                    <!-- Title -->
+                    <h2 style="color: var(--white); font-size: clamp(1.8rem, 2.5vw, 2.5rem); font-family: var(--font-heading); text-transform: uppercase; margin-top: 0; margin-bottom: 50px; letter-spacing: 2px;">
+                        <span style="color: var(--neon);">Information Model</span> IFC E-Submission Workflow
+                    </h2>
+
+                    <!-- Main Workflow Layout container -->
+                    <div style="display: flex; width: 100%; max-width: 1500px; gap: 30px; align-items: flex-start;">
+                        
+                        <!-- Left side inputs (Model Origination) -->
+                        <div style="display: flex; flex-direction: column; justify-content: flex-start; gap: 20px; width: 220px;">
+                            <div style="background: rgba(255,255,255,0.03); border-left: 4px solid #555; padding: 15px; border-radius: 8px;">
+                                <p style="color: #ccc; margin: 0; font-size: 0.95rem; font-weight: 600;">Modeling <span style="color: var(--neon); padding: 0 5px;">→</span> Revit</p>
+                            </div>
+                            <div style="background: rgba(255,255,255,0.03); border-left: 4px solid #555; padding: 15px; border-radius: 8px;">
+                                <p style="color: #ccc; margin: 0; font-size: 0.95rem; font-weight: 600;">Modeling <span style="color: var(--neon); padding: 0 5px;">→</span> ArchiCAD</p>
+                            </div>
+                            <div style="background: rgba(255,255,255,0.03); border-left: 4px solid #555; padding: 15px; border-radius: 8px;">
+                                <p style="color: #ccc; margin: 0; font-size: 0.95rem; font-weight: 600;">Modeling <span style="color: var(--neon); padding: 0 5px;">→</span> Bentley</p>
+                            </div>
+                        </div>
+
+                        <!-- Connector Arrow -->
+                        <div style="display: flex; flex-direction: column; justify-content: flex-start; padding-top: 75px;">
+                            <span style="color: var(--neon); font-size: 2rem; font-weight: bold;">→</span>
+                        </div>
+
+                        <!-- Pipeline Sequence -->
+                        <div style="flex: 1; display: flex; align-items: flex-start; justify-content: space-between; gap: 15px; padding-top: 60px;">
+                            
+                            <!-- 1. BIM Standards -->
+                            <div style="flex: 1.2; display: flex; flex-direction: column; align-items: center; gap: 15px;">
+                                <div style="background: #111; border: 2px solid #555; border-radius: 12px; width: 100%; padding: 20px 10px; text-align: center;">
+                                    <h3 style="color: var(--white); font-size: 1rem; margin: 0; font-weight: 700;">BIM Standards</h3>
+                                </div>
+                                <div style="color: #666; font-size: 1.5rem; line-height: 1;">↓</div>
+                                <div style="width: 100%; text-align: center; display: flex; flex-direction: column; gap: 8px;">
+                                    <p style="color: #aaa; font-size: 0.9rem; margin: 0;">Modeling recommends</p>
+                                    <p style="color: #aaa; font-size: 0.9rem; margin: 0;">Appendix "A~E"</p>
+                                </div>
+                            </div>
+
+                            <div style="padding-top: 20px;"><span style="color: var(--white); opacity: 0.4; font-size: 1.5rem; font-weight: bold;">→</span></div>
+
+                            <!-- 2. Export as IFC -->
+                            <div style="flex: 1; display: flex; flex-direction: column; align-items: center; gap: 15px;">
+                                <div style="background: #111; border: 2px solid var(--neon); border-radius: 12px; width: 100%; padding: 20px 10px; text-align: center; box-shadow: 0 0 15px rgba(204,255,0,0.1);">
+                                    <h3 style="color: var(--neon); font-size: 1rem; margin: 0; font-weight: 700;">Export as IFC</h3>
+                                </div>
+                                <div style="color: var(--neon); opacity: 0.5; font-size: 1.5rem; line-height: 1;">↓</div>
+                                <div style="width: 100%; text-align: center;">
+                                    <p style="color: var(--white); font-size: 0.95rem; margin: 0; font-weight: bold;">IFC 4.0</p>
+                                </div>
+                            </div>
+
+                            <div style="padding-top: 20px;"><span style="color: var(--white); opacity: 0.4; font-size: 1.5rem; font-weight: bold;">→</span></div>
+
+                            <!-- 3. Model Validation -->
+                            <div style="flex: 1.3; display: flex; flex-direction: column; align-items: center; gap: 15px;">
+                                <div style="background: #111; border: 2px solid #555; border-radius: 12px; width: 100%; padding: 20px 10px; text-align: center;">
+                                    <h3 style="color: var(--white); font-size: 1rem; margin: 0; font-weight: 700;">Model Validation</h3>
+                                </div>
+                                <div style="color: #666; font-size: 1.5rem; line-height: 1;">↓</div>
+                                <div style="width: 100%; text-align: center; display: flex; flex-direction: column; gap: 10px;">
+                                    <p style="color: #aaa; font-size: 0.9rem; margin: 0;">Local Check</p>
+                                    <p style="color: #aaa; font-size: 0.9rem; margin: 0;">DM QA/QC App</p>
+                                    <p style="color: #aaa; font-size: 0.9rem; margin: 0;">DM building Card generator</p>
+                                </div>
+                            </div>
+
+                            <div style="padding-top: 20px;"><span style="color: var(--white); opacity: 0.4; font-size: 1.5rem; font-weight: bold;">→</span></div>
+
+                            <!-- 4. Naming Files -->
+                            <div style="flex: 1; display: flex; flex-direction: column; align-items: center; gap: 15px;">
+                                <div style="background: #111; border: 2px solid #555; border-radius: 12px; width: 100%; padding: 20px 10px; text-align: center;">
+                                    <h3 style="color: var(--white); font-size: 1rem; margin: 0; font-weight: 700;">Naming Files</h3>
+                                </div>
+                                <div style="color: #666; font-size: 1.5rem; line-height: 1;">↓</div>
+                                <div style="width: 100%; text-align: center;">
+                                    <p style="color: #aaa; font-size: 0.9rem; margin: 0;">DBIMS</p>
+                                </div>
+                            </div>
+
+                            <div style="padding-top: 20px;"><span style="color: var(--white); opacity: 0.4; font-size: 1.5rem; font-weight: bold;">→</span></div>
+
+                            <!-- 5. SUBMIT -->
+                            <div style="flex: 1; display: flex; flex-direction: column; align-items: center; gap: 15px;">
+                                <div style="background: var(--neon); border: 2px solid var(--neon); border-radius: 12px; width: 100%; padding: 20px 10px; text-align: center; box-shadow: 0 0 20px rgba(204,255,0,0.3);">
+                                    <h3 style="color: #000; font-size: 1.1rem; margin: 0; font-weight: 800; text-transform: uppercase;">SUBMIT</h3>
+                                </div>
+                                <div style="color: var(--neon); opacity: 0.5; font-size: 1.5rem; line-height: 1;">↓</div>
+                                <div style="width: 100%; text-align: center;">
+                                    <p style="color: var(--white); font-size: 0.95rem; margin: 0; font-weight: bold;">Build Smart</p>
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Validation Dots Container at very bottom -->
+            <div class="slider-dots" id="test-dots" style="bottom: 30px;">
+                <div class="dot active" data-index="0"></div>
+                <div class="dot" data-index="1"></div>
+                <div class="dot" data-index="2"></div>
+            </div>
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
